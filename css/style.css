@@ -1,0 +1,359 @@
+/* Reset beberapa gaya default browser */
+body,
+h1,
+h2,
+p,
+ul,
+li,
+form,
+input,
+select,
+button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    color: #f0f0f0;
+    background-color: #121212;
+}
+
+/* Navigation Bar (Bar Navigasi) */
+nav {
+    background-color: #1a1a1a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #bdbdbd;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a:hover {
+    background-color: #80cbc4;
+    color: #121212;
+}
+
+/* Logo */
+nav ul li.logo a {
+    font-size: 1.2em;
+    font-weight: bold;
+    font-style: italic;
+}
+
+nav ul li.logo img {
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+/* Banner Section (Bagian Banner) */
+.banner {
+    background-color: #212121;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+    border-bottom: 2px solid #4db6ac;
+    overflow: hidden;
+    display: flex; /* Tambahkan ini */
+    flex-direction: column; /* Tambahkan ini */
+    align-items: center; /* Tambahkan ini */
+    justify-content: center; /* Tambahkan ini */
+}
+
+.banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.banner p {
+    font-size: 1.1em;
+    color: #cfd8dc;
+    margin-bottom: 20px;
+}
+
+.banner-slider {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 600px; /* Sesuaikan jika perlu */
+    margin: 20px auto;
+    border: 1px solid #4db6ac;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex; /* Pastikan flex ada */
+    flex-direction: column; /* Susun item di dalam slider vertikal */
+    align-items: center; /* Membuat item di dalam slider rata tengah horizontal */
+}
+
+.slide {
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 20px;
+    flex: 0 0 auto;
+    text-align: center; /* Pastikan teks di dalam slide rata tengah */
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.slide p {
+    font-style: italic;
+    color: #cfd8dc;
+    margin-bottom: 15px;
+}
+
+.agent-info {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Membuat info agen rata tengah horizontal */
+    margin-top: 20px; /* Beri jarak dari teks testimoni */
+}
+
+.agent-info img {
+    width: 60px; /* Sesuaikan ukuran foto jika perlu */
+    height: 60px; /* Sesuaikan ukuran foto jika perlu */
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ffffff;
+}
+
+.agent-info p {
+    text-align: left; /* Teks info agen tetap rata kiri di dalam containernya */
+    margin: 0;
+    color: #cfd8dc;
+}
+
+/* Package Section (Bagian Paket) */
+.package-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #212121;
+    border-bottom: 2px solid #4db6ac;
+}
+
+.package-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.package-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature {
+    width: 280px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #4db6ac;
+    border-radius: 8px;
+    text-align: left;
+    background-color: #263238;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.feature-number {
+    background-color: #4db6ac;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.feature img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.feature h3 {
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+/* Contact Section (Bagian Kontak) */
+.contact-section {
+    background-color: #1a1a1a;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.contact-section p {
+    color: #cfd8dc;
+    margin-bottom: 30px;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #cfd8dc;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #546e7a;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #ffffff;
+    background-color: #212121;
+}
+
+button {
+    background-color: #4db6ac;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: #80cbc4;
+    color: #121212;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Responsive Design (Desain Responsif) */
+
+/* Untuk Tablet (e.g., iPads) - Sesuaikan sesuai kebutuhan desain Anda */
+@media (max-width: 992px) {
+    .package-features {
+        max-width: 900px; /* Sesuaikan untuk menampilkan 3 kolom */
+    }
+
+    .feature {
+        width: 280px; /* Pertahankan lebar untuk 3 kolom */
+    }
+
+    nav ul {
+        justify-content: center; /* Membuat item navigasi rata tengah */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Margin lebih kecil antar item navigasi */
+    }
+
+    .banner {
+        padding: 30px 10px; /* Padding lebih kecil pada banner */
+    }
+
+    .banner h1 {
+        font-size: 2em; /* Ukuran font lebih kecil pada judul banner */
+    }
+}
+
+/* Untuk Ponsel (portrait) */
+@media (max-width: 768px) {
+    .package-features {
+        max-width: 600px; /* Sesuaikan untuk menampilkan 2 kolom */
+    }
+
+    .feature {
+        width: 45%; /* Lebar untuk 2 kolom */
+    }
+}
+
+/* Untuk Ponsel yang lebih kecil */
+@media (max-width: 576px) {
+    .package-features {
+        max-width: 300px; /* Satu kolom pada ponsel */
+    }
+
+    .feature {
+        width: 100%; /* Fitur mengisi penuh lebar pada ponsel */
+        margin: 10px 0; /* Margin atas dan bawah pada fitur */
+    }
+
+    .banner h1 {
+        font-size: 1.75em; /* Ukuran font lebih kecil pada judul banner */
+    }
+
+    .banner p {
+        font-size: 1em; /* Ukuran font lebih kecil pada paragraf banner */
+    }
+}
